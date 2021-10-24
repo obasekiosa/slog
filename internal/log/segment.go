@@ -4,7 +4,7 @@ import (
     "fmt"
     "os"
     "path"
-    api "github.com/obasekios/slog/api/v1"
+    api "github.com/obasekiosa/slog/api/v1"
     "google.golang.org/protobuf/proto"
 )
 
@@ -23,7 +23,7 @@ func newSegment(dir string, baseOffset uint64, c Config) (*segment, error) {
 
     var err error
     storeFile, err := os.OpenFile(
-        path.join(dir, fmt.Sprintf("%d%s", baseOffset, ".store")),
+        path.Join(dir, fmt.Sprintf("%d%s", baseOffset, ".store")),
         os.O_RDWR | os.O_CREATE | os.O_APPEND,
         0644,
     )
@@ -33,10 +33,6 @@ func newSegment(dir string, baseOffset uint64, c Config) (*segment, error) {
     }
 
     if s.store, err = newStore(storeFile); err != nil {
-        return nil, err
-    }
-
-    indexFile, err = newStore(storeFile); err != nil {
         return nil, err
     }
 
