@@ -1,0 +1,20 @@
+// Certificate service request for client certificate, used to generate the certificate
+// used for client authentication by the server, to validate and trust the client
+
+{
+    "CN": "client", // this is the identiy of the client, used even for authorizations
+    "hosts": [""], // allow from any host
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "names": [
+        {
+            "C": "NG",
+            "L": "PH",
+            "ST": "Port Harcourt",
+            "O": "Example Company",
+            "OU": "Distrubuted Services"
+        }
+    ]
+}

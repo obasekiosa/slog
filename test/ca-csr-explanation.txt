@@ -1,0 +1,18 @@
+// information used for key generation, and embbeded inside the key for the certificate authorithy
+{
+    "CN": "Example CA", // Common Name
+    "key": { 
+        "algo": "rsa", // Algorithm to use for generating the key to sign the certificate
+        "size": 2048 // size of key
+    },
+    "names": [ // list of various names associated with certificate. should contain
+    // at list one of C, L, ST O, OU. A name indicates an entity associated with the key
+        {
+            "C": "NG", // Counntry
+            "L": "PH", // Locality or municipality (eg city)
+            "ST": "Port Harcourt", // State or province
+            "O": "Example Organization", // organization
+            "OU": "CA Services" // organizational unit (department responsible for owning the key)
+        }
+    ]
+}

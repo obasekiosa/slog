@@ -1,0 +1,21 @@
+// this is the config for the server certificate, i.e info used to create it, embedded within it too.
+{
+    "CN": "127.0.0.1",
+    "hosts": [ // list of domain names this certificate is valid for
+        "localhost",
+        "127.0.0.1"
+    ],
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "names": [
+        {
+            "C": "NG",
+            "L": "PH",
+            "ST": "Port Harcourt",
+            "O": "Example Company",
+            "OU": "Distrubuted Services"
+        }
+    ]
+}

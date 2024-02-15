@@ -1,0 +1,23 @@
+// config for certificate authorithy on what kind of certificates to issue
+{
+    "signing": { // defines the signing policy
+        "profiles": {
+            "server": {
+                "expiry": "8760h", // expires in a year
+                "usages": [
+                    "signing", // used for digital signature
+                    "key encipherment", // encryption
+                    "server auth" // authentication
+                ]
+            },
+            "client": {
+                "expiry": "8760h",
+                "usages": [
+                    "signing",
+                    "key encipherment",
+                    "client auth"
+                ]
+            }
+        }
+    }
+}

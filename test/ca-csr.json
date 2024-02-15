@@ -1,0 +1,16 @@
+{
+    "CN": "Example CA", 
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "names": [
+        {
+            "C": "NG",
+            "L": "PH",
+            "ST": "Port Harcourt",
+            "O": "Example Organization",
+            "OU": "CA Services"
+        }
+    ]
+}
